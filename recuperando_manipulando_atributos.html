@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+
+  <!-- //biblioteca jquery  -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+         //funcao que recuperar conteudo html, apenas apos carregar todo o DOM
+
+        $(document).ready(() => {
+          
+         console.log( $('img').attr('src'))
+         console.log( $('div').attr('style'))
+         //alterar style
+         console.log( $('div').attr('style', 'background-color: blue;width: 100px;height: 100px;'))
+         //recuperar value do input
+         console.log( $('input').attr('value'))
+         //alterar value do input
+         console.log( $('input').attr('value', 'Eu continuo sendo um input'))
+         // alterar de type para password
+         console.log( $('input').attr('type', 'password'))
+
+          
+        })
+
+    </script>
+   
+</head>
+<body>
+
+     <img src="imagens/esfera_1.png" border="5"/>
+
+
+     <div style="background-color: red;width: 200px;height: 200px;"></div>
+
+     <input type="text" value="Eu sou um input" id="">
+    
+
+</body>
+</html>
