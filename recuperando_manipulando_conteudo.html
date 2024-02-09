@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+
+  <!-- //biblioteca jquery  -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+    <script>
+          //recuper conteudo interno de uma tag html 
+         $(document).ready(() => {
+          console.log('Conteudo div 1:',$('#div1').html())
+          console.log('Conteudo div 2:',$('#div2').html())
+          //alterar conteudo interno da div1
+          console.log($('#div1').html('estou alterando o valor novamnete'))
+
+           //alterar conteudo interno da div1 dentro de um strong
+           console.log($('#div1').html('<strong>estou alterando o valor novamnete</strong>'))
+
+             //alterar conteudo interno da div1 dentro de um strong
+             console.log($('#div1').html('<strong style="color: red">estou alterando o valor novamnete</strong>'))
+
+
+         })
+        
+
+    </script>
+   
+</head>
+<body>
+
+     <div id="div1" style="border:  1px solid; width: 200px; height: 200px;"> 
+        <a href="#">Teste</a>
+        <p>Esse é um paragrafo</p>
+        <div style="background-color: black; width: 50px; height: 50px; color: aliceblue;">
+          Est é uma div
+        </div>
+    
+    </div>
+
+     <div id="div2" style="border:  1px solid; width: 200px; height: 200px;"> Div 2</div>
+
+</body>
+</html>
