@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+
+  <!-- //biblioteca jquery  -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+    <script>
+      //prepend / append inserir em tags que encapsula conteudo(no inicio e final) innerHtml
+      //before / after inserir conteudo( antes e depois) de tag html (fora)
+      $(document).ready(() => {
+
+        // $('#lista1').html('<p>eu substitui todo conteudo</p>')    //final
+        $('#lista1').append('<li>item 4</li>')    //final
+        $('#lista1').prepend('<li>item 5</li>')   //inicio
+        $('#lista2').prepend('<div>item 5</div>')   //inicio
+        $('#lista2').append('<div>item 5</div>')   //final
+        $('#lista2').before('<h3>before - após</h3>')   //antes
+        $('#lista2').after('<h3>After - após</h3>')   //apos
+
+        //remover conteudo
+        // $('#lista1').remove()
+        // $('#lista2').remove()
+        $('.item2').remove()
+
+
+      })
+      
+
+    </script>
+   
+</head>
+<body>
+     <ul id="lista1">
+        <li>item 1</li>
+        <li class="item2">item 2</li>
+        <li>item 3</li>
+     </ul>
+   
+     <div id="lista2">
+         <div>item 1</div>
+         <div>item 2</div>
+         <div>item 3</div>
+     </div>
+     <hr>
+</body>
+</html>
