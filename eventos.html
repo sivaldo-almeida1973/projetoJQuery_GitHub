@@ -28,12 +28,30 @@
 				// })
 
 				//arrow function -----------------------------
-
+         //evento ao movimentar o scroll da pagina
 				$('#div1').scroll( e => {
 					$(e.target).css('background', 'blue')
 				})
 
+				//evento ao clicar o mouse
+				$('#btn1').mousedown(() => {
+					$('#div2').css('background-color', 'green')
+				})
+        //evento ao soltar o mouse que é igual ao(click)
+				$('#btn1').mouseup(() => {
+					$('#div2').css('background', 'gray')
+				})
 
+				//evento de duplo click no bottao
+				$('#btn2').dblclick(() => {
+					$('#div2').css('background' , 'yellow')
+				})
+
+				//detectar o movimento do mouse e passa coordenadas
+				$('#div2').mousemove((e) => {
+					console.log(e.offsetX, e.offsetY)
+					$('#resultado_div').html('X: '+ e.offsetX + ' /Y :'+ e.offsetY)
+				})
 
 
 			})
@@ -60,10 +78,10 @@
 			<hr />
 
 			<h3>Mouse</h3>
-			<button type="button">Clique aqui</button>
-			<button type="button">Clique aqui 2x</button>
-			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-			<span>Resultado do evento sobre a div</span>
+			<button id="btn1" type="text">Clique aqui</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
+			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+			<span>Resultado do evento sobre a div</span><span id="resultado_div"></span>
 			<hr />
 
 			<h3>Teclado</h3>
