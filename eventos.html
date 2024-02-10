@@ -5,6 +5,18 @@
 		<title>jQuery</title>
 
 		<style>
+			#divExterna {
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+				padding: 70px;
+			}
+			
+			#divInterna {
+				background-color: #061bd6;
+				width: 80px;
+				height: 80px;
+			}
 			
 		</style>
 
@@ -54,6 +66,54 @@
 				})
 
 
+        //mouseover tem mesmo resultado do mouseenter (entrada) antigos
+			// 	$('#divExterna').mouseover(() => {
+			// 		$('#resultadoDiv1').html('Entrou')
+			// 		console.log('Div externa entrou')
+			// 	})
+
+      //     //efeito de borbulhamento----------------todos
+			// 		$('#divExterna').mouseout(() => {
+			// 		$('#resultadoDiv1').html('Saiu')
+			// 		console.log('Div externa saiu')
+			// 	})
+
+			//  //mouseover tem mesmo resultado do mouseenter (entrada) antigos
+			// 		 $('#divInterna').mouseover(() => {
+			// 		$('#resultadoDiv2').html('Entrou')
+			// 		console.log('Div interna entrou')
+			// 	})
+
+
+			// 		$('#divInterna').mouseout(() => {
+			// 		$('#resultadoDiv2').html('Saiu')
+			// 		console.log('Div interna saiu')
+			// 	})
+
+			
+        //esse dois comandos novos evitam um erro de borbulhamento
+				$('#divExterna').mouseenter(() => {
+					$('#resultadoDiv1').html('Entrou')
+					console.log('Div externa entrou')
+				})
+
+				$('#divExterna').mouseleave(() => {
+					$('#resultadoDiv1').html('Saiu')
+					console.log('Div externa saiu')
+				})
+
+				
+				$('#divInterna').mouseenter(() => {
+					$('#resultadoDiv2').html('Entrou')
+					console.log('Div interna entrou')
+				})
+
+				$('#divInterna').mouseleave(() => {
+					$('#resultadoDiv2').html('Saiu')
+					console.log('Div interna saiu')
+				})
+
+
 			})
 	
 		
@@ -82,6 +142,15 @@
 			<button id="btn2" type="button">Clique aqui 2x</button>
 			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
 			<span>Resultado do evento sobre a div</span><span id="resultado_div"></span>
+			<br>
+
+			<div id="divExterna">
+				<div id="divInterna"></div>
+				
+			</div>
+			<span>Div Externa:</span><span id="resultadoDiv1"></span>
+			<br>
+			<span>Div Interna:</span><span id="resultadoDiv2"></span>
 			<hr />
 
 			<h3>Teclado</h3>
